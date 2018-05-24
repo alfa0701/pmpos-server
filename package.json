@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/app.ts --host http://localhost:1234 --room CONFIG_TEST --gport 4000 --branch BESEVLER"
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/app.ts --host https://pmpos-node.herokuapp.com --network CONFIG_TEST --branch MAIN"
   },
   "keywords": [],
   "author": "Emre Eren <emreeren@gmail.com> (sambapos.com)",
@@ -30,7 +30,7 @@
     "immutable": "^4.0.0-rc.9",
     "lodash": "^4.17.10",
     "minimist": "^1.2.0",
-    "pmpos-core": "^1.0.4",
+    "pmpos-core": "^1.0.5",
     "shortid": "^2.2.8",
     "subscriptions-transport-ws": "^0.9.9",
     "y-array": "^11.0.0-5",

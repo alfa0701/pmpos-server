@@ -4,12 +4,12 @@ import * as minimist from 'minimist';
 import * as url from 'url';
 
 const options = minimist(process.argv.slice(2), {
-    string: ['host', 'port', 'room', 'branch', 'user', 'terminal', 'gport'],
+    string: ['host', 'port', 'network', 'branch', 'user', 'terminal', 'gport'],
     default: {
-        host: 'http://localhost',
+        host: 'https://pmpos-node.herokuapp.com',
         port: 1234,
         gport: 4000,
-        room: 'CONFIG_TEST',
+        network: 'CONFIG_TEST',
         branch: '',
         user: 'gqluser',
         terminal: 'gqlterminal'
@@ -31,7 +31,7 @@ console.log(`Connecting to: ${serverUrl}`);
 
 const server = new Server();
 
-ProtocolManager.connect(serverUrl, false, options.terminal, options.room, options.branch, options.user,
+ProtocolManager.connect(serverUrl, false, options.terminal, options.network, options.branch, options.user,
     (config) => {
         // ConfigManager.updateConfig(config);
     },
