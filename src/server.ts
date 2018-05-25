@@ -51,7 +51,7 @@ const typeDefs = `
 
   type Tag { 
       id:String, name: String, value: String, quantity: Float, unit: String, 
-      price: Float, func: String, source: String, target: String 
+      amount: Float, func: String, source: String, target: String 
     }
 
   type Query { 
