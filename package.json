@@ -30,7 +30,7 @@
     "immutable": "^4.0.0-rc.9",
     "lodash": "^4.17.10",
     "minimist": "^1.2.0",
-    "pmpos-core": "^1.0.5",
+    "pmpos-core": "^1.0.7",
     "shortid": "^2.2.8",
     "subscriptions-transport-ws": "^0.9.9",
     "y-array": "^11.0.0-5",
