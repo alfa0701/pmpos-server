@@ -8,7 +8,7 @@ const options = minimist(process.argv.slice(2), {
     default: {
         host: 'https://pmpos-node.herokuapp.com',
         port: 1234,
-        gport: 4000,
+        gport: 80,
         network: 'CONFIG_TEST',
         branch: '',
         user: 'gqluser',

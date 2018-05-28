@@ -182,10 +182,9 @@ export default class Server {
     private app = express();
 
     public connect(port: number) {
-        this.app.use('/pmpos3', express.static(path.join(__dirname, '../../pmpos3/build'), { fallthrough: true }));
-
+        this.app.use('/fonts', express.static(path.join(__dirname, '../../pmpos3/build/fonts')));
         this.app.use(`/graphql`, bodyParser.json(), graphqlExpress({ schema }));
-
+        this.app.use('/pmpos3', express.static(path.join(__dirname, '../../pmpos3/build'), { fallthrough: true }));
         this.app.use(`/graphiql`, (req, res, next) => {
             graphiqlExpress({
                 endpointURL: `/graphql`,
@@ -196,11 +195,14 @@ export default class Server {
                     pathname: `/subscriptions`
                 })
             })(req, res, next)
-        })
-
+        });
+        this.app.get('/', (req, res) => {
+            res.redirect('/pmpos3');
+        });
         this.app.get('*', (req, res) => {
             res.sendFile(path.resolve(__dirname, '../../pmpos3/build/index.html'));
         });
+
 
         const ws = createServer(this.app);
 
