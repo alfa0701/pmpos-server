@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/app.ts --host https://pmpos-node.herokuapp.com --network CONFIG_TEST --branch MAIN"
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/app.ts --host http://localhost:1234 --network CONFIG_TEST --branch MAIN"
   },
   "keywords": [],
   "author": "Emre Eren <emreeren@gmail.com> (sambapos.com)",
