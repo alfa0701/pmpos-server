@@ -62,7 +62,7 @@ const typeDefs = `
   type Mutation {
       enableTerminal(ti: String!, user: String!): String,
       createCard(ti: String!, cardType: String!, tags:[CardTag]): Card,
-      executeAction(ti: String!, type: String!, cardId: String, actionCardId:String!, data:[KV]): Card,
+      executeAction(ti: String!, type: String!, cardId: String, actionCardId:String, data:[KV]): Card,
       executeCommand(ti: String!, name: String!, cardId: String, data:[KV]): Card,
       closeCard(ti: String!, cardId: String): Card
   }
