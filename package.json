@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "start": "npm run start:remote",
+    "prod": "node ./dist/app.js --network DEMO --branch MAIN --gport 4000 --host https://pmpos-node.herokuapp.com",
     "start:remote": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/app.ts --network DEMO --branch MAIN --gport 4000",
     "start:local": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/app.ts --host http://localhost:1234 --network DEMO --branch MAIN"
   },
